@@ -1,0 +1,27 @@
+/* Given a string s, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.
+
+ 
+
+Example 1:
+
+Input: s = "abab"
+Output: true
+Explanation: It is the substring "ab" twice.
+Example 2:
+
+Input: s = "aba"
+Output: false */
+
+
+============Solution=========================
+
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var repeatedSubstringPattern = function(s) {
+    let s2 = s+s;
+    s2 = s2.substring(1,s2.length-1);
+    return s2.includes(s);
+};
